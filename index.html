@@ -3,118 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ManChild Prodigy - Công Ty Sản Xuất Âm Nhạc</title>
+  <title>ManChild Prodigy - Trang Web Giới Thiệu</title>
   <style>
-    body {
+    /* Reset margin và padding */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4B0082, #00008B);
+      background: linear-gradient(135deg, #2e003e, #000428);
       color: #fff;
       line-height: 1.6;
+      overflow-x: hidden;
     }
+
+    /* Header với Navigation */
+    header {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      animation: fadeIn 1s ease-in;
+    }
+
     .container {
       width: 90%;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
     }
-    header {
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 50px 0;
+      padding-top: 80px; /* Dành chỗ cho header cố định */
+      animation: fadeIn 2s ease-in;
     }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
     }
-    header p {
-      font-size: 1.2em;
+
+    .hero p {
+      font-size: 1.5em;
     }
+
+    /* Các Section */
     section {
-      margin: 40px 0;
+      padding: 80px 0;
+      animation: fadeIn 1.5s ease-in;
     }
-    .team {
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+    }
+
+    /* Mục Giới Thiệu */
+    #introduction {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 10px;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    #introduction p {
+      font-size: 1.1em;
+      text-align: justify;
+    }
+
+    /* Mục Dịch Vụ */
+    #services {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: center;
     }
-    .member {
-      flex: 1 1 30%;
+
+    .service-item {
       background: rgba(255, 255, 255, 0.1);
-      margin: 10px;
+      border-radius: 10px;
       padding: 20px;
-      border-radius: 8px;
+      margin: 10px;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+    }
+
+    /* Mục Liên Hệ */
+    #contact {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto;
       text-align: center;
     }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 20px 0;
+      padding: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1s ease-in;
     }
-    a {
-      color: #fff;
-      text-decoration: underline;
+
+    /* Animation keyframes */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Phần Header -->
-    <header>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">ManChild Prodigy</div>
+        <ul>
+          <li><a href="#introduction">Giới Thiệu</a></li>
+          <li><a href="#services">Dịch Vụ</a></li>
+          <li><a href="#contact">Liên Hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
       <h1>ManChild Prodigy</h1>
-      <p>Công ty sản xuất âm nhạc với đam mê và sáng tạo</p>
-    </header>
+      <p>Đam mê âm nhạc & sáng tạo không giới hạn</p>
+    </div>
+  </div>
 
-    <!-- Phần Câu Chuyện -->
-    <section id="story">
-      <h2>Câu Chuyện Của Chúng Tôi</h2>
+  <!-- Giới Thiệu -->
+  <section id="introduction">
+    <div class="container">
+      <h2>Giới Thiệu</h2>
       <p>
-        ManChild Prodigy được thành lập với mong muốn mang đến những sản phẩm âm nhạc chất lượng, độc đáo và truyền cảm hứng. Từng giai đoạn phát triển của chúng tôi gắn liền với những nỗ lực không ngừng, vượt qua thử thách và đam mê sáng tạo. Chúng tôi tin rằng âm nhạc là ngôn ngữ của tâm hồn, và mỗi bản nhạc là một câu chuyện độc đáo, kể về cảm xúc và trải nghiệm của con người.
+        ManChild Prodigy được thành lập từ niềm đam mê âm nhạc sâu sắc và khát khao tạo ra những tác phẩm đầy cảm hứng. Hành trình của chúng tôi bắt đầu từ một nhóm bạn trẻ, nơi mỗi thành viên mang theo một câu chuyện riêng về niềm đam mê với âm nhạc. 
+        Những buổi gặp gỡ đầu tiên đầy nhiệt huyết đã tạo nên nền tảng cho một team gắn bó, cùng nhau vượt qua thử thách và khẳng định tầm nhìn của mình. Chúng tôi tin rằng âm nhạc không chỉ là nghệ thuật mà còn là nguồn động lực kết nối con người, truyền cảm hứng và tạo nên những giá trị vượt thời gian.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Phần Đội Ngũ -->
-    <section id="team">
-      <h2>Đội Ngũ 6 Thành Viên</h2>
-      <div class="team">
-        <div class="member">
-          <h3>Thành Viên 1</h3>
-          <p>Vai trò: Sáng tác</p>
-        </div>
-        <div class="member">
-          <h3>Thành Viên 2</h3>
-          <p>Vai trò: Sản xuất âm nhạc</p>
-        </div>
-        <div class="member">
-          <h3>Thành Viên 3</h3>
-          <p>Vai trò: Hòa âm</p>
-        </div>
-        <div class="member">
-          <h3>Thành Viên 4</h3>
-          <p>Vai trò: Trình diễn</p>
-        </div>
-        <div class="member">
-          <h3>Thành Viên 5</h3>
-          <p>Vai trò: Kỹ thuật</p>
-        </div>
-        <div class="member">
-          <h3>Thành Viên 6</h3>
-          <p>Vai trò: Quản lý dự án</p>
-        </div>
+  <!-- Dịch Vụ -->
+  <section id="services">
+    <div class="container">
+      <h2>Dịch Vụ</h2>
+      <div class="service-item">
+        <h3>Sản Xuất Âm Nhạc</h3>
+        <p>Sáng tạo và sản xuất các bản nhạc độc đáo với chất lượng chuyên nghiệp.</p>
       </div>
-    </section>
+      <div class="service-item">
+        <h3>Sản Xuất Video</h3>
+        <p>Thiết kế và sản xuất MV, video âm nhạc với hiệu ứng đặc sắc.</p>
+      </div>
+      <div class="service-item">
+        <h3>Tư Vấn & Hỗ Trợ</h3>
+        <p>Hướng dẫn kỹ thuật, tư vấn sáng tác và các dự án âm nhạc.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Phần Liên Hệ -->
-    <section id="contact">
-      <h2>Thông Tin Liên Hệ</h2>
+  <!-- Liên Hệ -->
+  <section id="contact">
+    <div class="container">
+      <h2>Liên Hệ</h2>
       <p>Địa chỉ: 135 Hai Bà Trưng, Quận 1, TP.HCM</p>
       <p>Email: contact@manchildprodigy.com</p>
       <p>Số điện thoại: 0123 456 789</p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Phần Footer -->
-    <footer>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
       <p>&copy; 2025 ManChild Prodigy. All Rights Reserved.</p>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>
