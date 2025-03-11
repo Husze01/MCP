@@ -1,26 +1,36 @@
-# ManChild Prodigy
+# ManChild Prodigy - Trang Web Giới Thiệu
 
-Đây là trang web giới thiệu về công ty sản xuất âm nhạc **ManChild Prodigy** với phong cách tối giản, sử dụng tone màu gradient tím - xanh đậm. Nội dung trang web tập trung vào câu chuyện phát triển của công ty, đội ngũ 6 thành viên và đầy đủ thông tin liên lạc.
+Đây là trang web giới thiệu về công ty sản xuất âm nhạc **ManChild Prodigy**, được lấy cảm hứng từ giao diện của [Splice](https://splice.com/). Trang web có bố cục hiện đại với các mục: Giới Thiệu, Dịch Vụ, Liên Hệ, và sử dụng hiệu ứng animation cùng nền gradient tone tối với màu tím - xanh.
 
-## Nội Dung Trang Web
+## Tính Năng
 
-- **Header:** Tên công ty và khẩu hiệu.
-- **Câu chuyện:** Giới thiệu về lịch sử và đam mê sáng tạo của ManChild Prodigy.
-- **Đội ngũ:** Giới thiệu 6 thành viên với vai trò của từng người.
-- **Liên hệ:** Thông tin địa chỉ, email và số điện thoại.
+- **Header & Navigation:**  
+  Navigation cố định với logo và các liên kết điều hướng.
+  
+- **Hero Section:**  
+  Giới thiệu nổi bật với tiêu đề và tagline chính.
+  
+- **Giới Thiệu:**  
+  Câu chuyện về đam mê âm nhạc và lịch sử hình thành của team.
+  
+- **Dịch Vụ:**  
+  Trình bày các dịch vụ theo dạng grid với hiệu ứng hover.
+  
+- **Liên Hệ:**  
+  Thông tin liên hệ đầy đủ với địa chỉ, email và số điện thoại.
+  
+- **Footer:**  
+  Thông tin bản quyền và liên kết mạng xã hội (nếu cần).
 
 ## Hướng Dẫn Triển Khai
 
 1. Clone hoặc download repository này.
-2. Mở tệp `index.html` trong trình duyệt web để xem trang giới thiệu.
-3. Chỉnh sửa nội dung, style theo nhu cầu nếu cần.
+2. Mở file `index.html` trong trình duyệt để xem trang web.
+3. Tùy chỉnh nội dung và phong cách theo nhu cầu của bạn.
 
-## Tải Lên GitHub
+## Triển Khai trên GitHub Pages
 
-Bạn có thể tải repository này lên GitHub theo các bước sau:
-
-1. Tạo repository mới trên GitHub.
-2. Upload các tệp trong cấu trúc dự án vào repository đó.
-3. Sử dụng GitHub Web Editor hoặc GitHub Desktop nếu không muốn dùng dòng lệnh.
-
----
+1. Tải các tệp lên một repository mới trên GitHub.
+2. Vào phần **Settings** của repository, tìm mục **GitHub Pages**.
+3. Chọn branch (thường là `main` hoặc `master`) và thư mục gốc (`/`) làm nguồn deploy.
+4. Lưu lại, và truy cập URL do GitHub cung cấp.
