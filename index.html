@@ -4,69 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ManChild Prodigy - Trang Web Giới Thiệu</title>
+  <!-- Google Fonts: Montserrat cho tiêu đề, Roboto cho nội dung -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
-    /* Reset margin và padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Reset & Cấu hình cơ bản */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: linear-gradient(135deg, #2e003e, #000428);
       color: #fff;
       line-height: 1.6;
       overflow-x: hidden;
     }
-
-    /* Header với Navigation */
+    /* Header & Navigation */
     header {
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0,0,0,0.4);
       padding: 20px 0;
       position: fixed;
-      width: 100%;
       top: 0;
+      width: 100%;
       z-index: 100;
       animation: fadeIn 1s ease-in;
     }
-
     .container {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
     }
-
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-
-    nav .logo {
+    .logo {
+      font-family: 'Montserrat', sans-serif;
       font-size: 1.8em;
       font-weight: bold;
     }
-
     nav ul {
       list-style: none;
       display: flex;
     }
-
     nav ul li {
       margin-left: 20px;
     }
-
     nav ul li a {
       text-decoration: none;
       color: #fff;
       transition: color 0.3s;
     }
-
     nav ul li a:hover {
       color: #ffd700;
     }
-
     /* Hero Section */
     .hero {
       height: 100vh;
@@ -77,51 +66,45 @@
       padding-top: 80px; /* Dành chỗ cho header cố định */
       animation: fadeIn 2s ease-in;
     }
-
     .hero h1 {
+      font-family: 'Montserrat', sans-serif;
       font-size: 3.5em;
       margin-bottom: 20px;
     }
-
     .hero p {
       font-size: 1.5em;
     }
-
-    /* Các Section */
+    /* Các Section chung */
     section {
       padding: 80px 0;
       animation: fadeIn 1.5s ease-in;
     }
-
     section h2 {
       text-align: center;
       margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
       font-size: 2.5em;
     }
-
-    /* Mục Giới Thiệu */
-    #introduction {
-      background: rgba(255, 255, 255, 0.1);
+    /* About Section */
+    #about {
+      background: rgba(255,255,255,0.1);
       padding: 40px;
       border-radius: 10px;
-      margin: 0 auto;
       max-width: 800px;
+      margin: 0 auto;
     }
-
-    #introduction p {
+    #about p {
       font-size: 1.1em;
       text-align: justify;
     }
-
-    /* Mục Dịch Vụ */
+    /* Services Section */
     #services {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
-
     .service-item {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.1);
       border-radius: 10px;
       padding: 20px;
       margin: 10px;
@@ -130,39 +113,29 @@
       text-align: center;
       transition: transform 0.3s;
     }
-
     .service-item:hover {
       transform: scale(1.05);
     }
-
-    /* Mục Liên Hệ */
+    /* Contact Section */
     #contact {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.1);
       padding: 40px;
       border-radius: 10px;
       max-width: 600px;
       margin: 0 auto;
       text-align: center;
     }
-
     /* Footer */
     footer {
       text-align: center;
       padding: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-top: 1px solid rgba(255,255,255,0.2);
       animation: fadeIn 1s ease-in;
     }
-
-    /* Animation keyframes */
+    /* Animation */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -173,7 +146,7 @@
       <nav>
         <div class="logo">ManChild Prodigy</div>
         <ul>
-          <li><a href="#introduction">Giới Thiệu</a></li>
+          <li><a href="#about">Giới Thiệu</a></li>
           <li><a href="#services">Dịch Vụ</a></li>
           <li><a href="#contact">Liên Hệ</a></li>
         </ul>
@@ -182,44 +155,43 @@
   </header>
 
   <!-- Hero Section -->
-  <div class="hero">
+  <section class="hero">
     <div class="container">
       <h1>ManChild Prodigy</h1>
       <p>Đam mê âm nhạc & sáng tạo không giới hạn</p>
     </div>
-  </div>
+  </section>
 
-  <!-- Giới Thiệu -->
-  <section id="introduction">
+  <!-- About Section -->
+  <section id="about">
     <div class="container">
       <h2>Giới Thiệu</h2>
       <p>
-        ManChild Prodigy được thành lập từ niềm đam mê âm nhạc sâu sắc và khát khao tạo ra những tác phẩm đầy cảm hứng. Hành trình của chúng tôi bắt đầu từ một nhóm bạn trẻ, nơi mỗi thành viên mang theo một câu chuyện riêng về niềm đam mê với âm nhạc. 
-        Những buổi gặp gỡ đầu tiên đầy nhiệt huyết đã tạo nên nền tảng cho một team gắn bó, cùng nhau vượt qua thử thách và khẳng định tầm nhìn của mình. Chúng tôi tin rằng âm nhạc không chỉ là nghệ thuật mà còn là nguồn động lực kết nối con người, truyền cảm hứng và tạo nên những giá trị vượt thời gian.
+        ManChild Prodigy được hình thành từ niềm đam mê âm nhạc và khát khao sáng tạo. Hành trình bắt đầu từ những buổi gặp gỡ của nhóm bạn trẻ, nơi mỗi thành viên mang trong mình câu chuyện riêng về niềm đam mê với âm nhạc. Qua thời gian, chúng tôi đã cùng nhau vượt qua những thử thách để tạo nên một đội ngũ chuyên nghiệp và đầy cảm hứng. Âm nhạc không chỉ là nghệ thuật mà còn là chất keo kết nối tâm hồn con người, truyền cảm hứng và tạo ra những giá trị vượt thời gian.
       </p>
     </div>
   </section>
 
-  <!-- Dịch Vụ -->
+  <!-- Services Section -->
   <section id="services">
     <div class="container">
       <h2>Dịch Vụ</h2>
       <div class="service-item">
         <h3>Sản Xuất Âm Nhạc</h3>
-        <p>Sáng tạo và sản xuất các bản nhạc độc đáo với chất lượng chuyên nghiệp.</p>
+        <p>Sáng tạo và sản xuất các bản nhạc độc đáo, chất lượng cao.</p>
       </div>
       <div class="service-item">
-        <h3>Sản Xuất Video</h3>
-        <p>Thiết kế và sản xuất MV, video âm nhạc với hiệu ứng đặc sắc.</p>
+        <h3>Video Âm Nhạc</h3>
+        <p>Sản xuất MV và video clip âm nhạc với hiệu ứng chuyên nghiệp.</p>
       </div>
       <div class="service-item">
-        <h3>Tư Vấn & Hỗ Trợ</h3>
-        <p>Hướng dẫn kỹ thuật, tư vấn sáng tác và các dự án âm nhạc.</p>
+        <h3>Tư Vấn Âm Nhạc</h3>
+        <p>Cung cấp dịch vụ tư vấn sáng tác và hỗ trợ dự án âm nhạc.</p>
       </div>
     </div>
   </section>
 
-  <!-- Liên Hệ -->
+  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <h2>Liên Hệ</h2>
